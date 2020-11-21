@@ -53,45 +53,49 @@ table {
 
 
 
-/* ---------- Hello, my name is Adam Birder and this is the beginning of my CONTACT PAGE CSS for 318 Digital Typography November 2019 ------------ */
+/* ---------- Hello, my name is Adam Birder and this is the beginning of my CONTACT PAGE CSS for 201 November 2020 ------------ */
 
 html, body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
-  background: url(images/bricks_bg.jpg)
+  background: url(images/pattern_bg.jpg)
       center center fixed no-repeat;
   background-size: cover;
-	
-	
 }
 
 .center {
-    width: 800px;
+    width: 55%; /* makes div responsive */
 	padding: 2%;
-    margin: 100px auto;
- 	background: rgba(0, 150, 178, .75); /*this uses opacity of 75% for the background color*/
+    margin: 75px auto;
+ 	background: rgba(255, 255, 255, .60); /*this uses opacity of 75% for the background color*/
 	text-align: center;
-	border: 4px dashed white;
+	/* removed border: 4px dashed white; */
+    border-radius: 40px 40px 40px 40px;
 }
 
    
 #logo {
-    margin-bottom: 16px;
-	border: 3px dashed #174399;
+    margin-bottom: 8px;
 	text-align: center;
 }
 
 h1 {
-	font-family: parisine-office-std, sans-serif;
-	font-size: 2em;
+	font-family: verdana, sans-serif;
+	font-size: 4em;
+    font-weight: 400;
     margin: 0px auto 10px auto;
-    color: #000;
+    color: #3066b5;
+    letter-spacing: 4.5px;
+    background: -webkit-linear-gradient(#97b6e8, #3066b5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 
 h2 {
-    font-family: parisine-office-std, sans-serif;
+    font-family: verdana, sans-serif;
 	font-size: 1.5em;
     line-height: 1.4;
     color: #fff;
@@ -100,40 +104,106 @@ h2 {
 }
 
 p {
-    font-family: parisine-office-std, sans-serif;
+    font-family: verdana, sans-serif;
 	font-size: 1.2em;
     line-height: 1.6;
     font-style: italic;
-    color: antiquewhite;
+    color: grey;
 }
     
 nav{
-    font-family: parisine-office-std, sans-serif;
-    font-size: 1.2em;
-    width: 400px; /* width of the nav element */
-    margin: 0 auto; /* this enters the entire nav element inside the center div */
-    border: dashed turquoise;
-    border-width: 3px 0; /* this puts a 3 pixel border on top and bottom of the nav element */
-    text-align: center;
-    margin-top: 2em; /* This adds a bit of space above the nav element */
+	margin: 27px auto 0;
+	position: relative;
+	width: 402px;
+	height: 50px;
+	background-color: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+    
 }  
 
 nav li{
     display: inline;
 }
 
-nav a{
-    display: inline-block;
-    padding: 10px;
+nav a {
+	line-height: 50px;
+	height: 100%;
+    font-family: verdana, sans-serif;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
 }
 
-a{
-    color: #444;
-    text-decoration: none; /* removes the underline */
-    font-weight: bold;
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
 }
 
-a:hover{
-    color: white;
-    background: #174399;
+a:nth-child(1) {
+	width: 134px;
+}
+a:nth-child(2) {
+	width: 134px;
+}
+a:nth-child(3) {
+	width: 134px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation {
+	width: 134px;
+	left: 0;
+	background-color: #1abc9c;
+}
+nav .start-about, a:nth-child(2):hover~.animation {
+	width: 134px;
+	left: 134px;
+	background-color: #e74c3c;
+}
+nav .start-blog, a:nth-child(3):hover~.animation {
+	width: 134px;
+	left: 268px;
+	background-color: #3498db;
+}
+
+.fade-in {
+  animation: fadeIn ease 6s;
+  -webkit-animation: fadeIn ease 10s;
+  -moz-animation: fadeIn ease 10s;
+  -o-animation: fadeIn ease 10s;
+  -ms-animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
