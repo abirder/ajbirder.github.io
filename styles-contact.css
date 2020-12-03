@@ -197,7 +197,7 @@ a, a:focus, a:hover, a:active, a:visited {
   font-weight: 300;
   pointer-events: none;
   line-height: 1.75; 
-  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff;
+  text-shadow: 1px 1px 0 #7f7f7f, -1px 1px 0 #7f7f7f;
   transition: background ease-out 500ms;
 }
 
